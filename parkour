@@ -1,6 +1,3 @@
-_G.Transparency = 0.5 -- This changes the transparency of your limbs. You can change this from 0 - 1
-_G.Walkspeed = 45 -- This increases the max speed that you can reach. You can change this from 35 - inf
-_G.HideAccessories = true -- This makes your hats the same transparency as your limbs. You can change this to true or false
 
 game.Players.LocalPlayer.Character:BreakJoints()
 plr = game.Players.LocalPlayer
@@ -2168,7 +2165,7 @@ if UIS.TouchEnabled and not UIS.KeyboardEnabled and not UIS.MouseEnabled
 	end)
 end
 local leftwallrunanim = Instance.new("Animation",char)
-leftwallrunanim.AnimationId = "rbxassetid://180426354"
+leftwallrunanim.AnimationId = "rbxassetid://12518152696"
 local leftwallrunanimplay = hum:LoadAnimation(leftwallrunanim)
 
 
@@ -2177,15 +2174,13 @@ downedanim1.AnimationId = "rbxassetid://282574440"
 local downedanim1play = hum:LoadAnimation(downedanim1)
 
 
-
-
 local rightwallrunanim = Instance.new("Animation",char)
-rightwallrunanim.AnimationId = "rbxassetid://180426354"
+rightwallrunanim.AnimationId = "rbxassetid://12518152696"
 local rightwallrunanimplay = hum:LoadAnimation(rightwallrunanim)
 
 
 local verticalwallrunanim = Instance.new("Animation",char)
-verticalwallrunanim.AnimationId = "rbxassetid://180426354"
+verticalwallrunanim.AnimationId = "rbxassetid://12518152696"
 local verticalwallrunanimplay = hum:LoadAnimation(verticalwallrunanim)
 
 local roll = Instance.new("Animation",char)
@@ -3458,9 +3453,9 @@ local Root = Character:WaitForChild("HumanoidRootPart")
 local Head = Character:WaitForChild("Head")
 local Hum = Character:WaitForChild("Humanoid")
 local holdingon = Instance.new("Animation",hum)
-holdingon.AnimationId = "rbxassetid://148831003"
+holdingon.AnimationId = "rbxassetid://12520972571"
 local climbingstuffs = Instance.new("Animation",hum)
-climbingstuffs.AnimationId = "rbxassetid://125750702"
+climbingstuffs.AnimationId = "rbxassetid://12520880485"
 local CA = Hum:LoadAnimation(climbingstuffs)
 local HA = Hum:LoadAnimation(holdingon)
 local TouchGui = plr:WaitForChild("PlayerGui"):FindFirstChild("TouchGui")
