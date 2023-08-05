@@ -1,8 +1,4 @@
 
-game.Players.LocalPlayer.Character:BreakJoints()
-plr = game.Players.LocalPlayer
-plr.CharacterAdded:Connect(function()
-wait(.5)
 local colormansup = 255
 local sliding = false
 
@@ -1822,4 +1818,3 @@ while true do
 	    end
 
 end
-end)
