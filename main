@@ -1,4 +1,5 @@
- game.Players.LocalPlayer.Character:BreakJoints()
+
+game.Players.LocalPlayer.Character:BreakJoints()
 plr = game.Players.LocalPlayer
 plr.CharacterAdded:Connect(function()
 wait(.5)
@@ -573,7 +574,7 @@ game:GetService("RunService"):BindToRenderStep("CameraOffset",Enum.RenderPriorit
 	if hum.Health == 0 then script:Destroy() end
 	pcall(function()
 	 distance = (character.Head.Position - camera.CoordinateFrame.p).magnitude
-	end)
+	
 	if distance <= 1 then
 		rightShoulder.C0 = rightShoulder.C0:lerp((camera.CoordinateFrame * CFrame.new(1, -1, 0)):toObjectSpace(torso.CFrame):inverse() * CFrame.Angles(0, math.pi/2, 0), updateSpeed)
 		leftShoulder.C0 = leftShoulder.C0:lerp((camera.CoordinateFrame * CFrame.new(-1, -1, 0)):toObjectSpace(torso.CFrame):inverse() * CFrame.Angles(0, -math.pi/2, 0), updateSpeed)
@@ -581,11 +582,12 @@ game:GetService("RunService"):BindToRenderStep("CameraOffset",Enum.RenderPriorit
 		rightShoulder.C0 = rightShoulder.C0:lerp(CFrame.new(1, 0.5, 0) * CFrame.Angles(0, math.pi/2, 0),updateSpeed)
 		leftShoulder.C0 = leftShoulder.C0:lerp(CFrame.new(-1, 0.5, 0) * CFrame.Angles(0, -math.pi/2, 0),updateSpeed)
 	end
+	end)
 	hum.CameraOffset = (rootpart.CFrame+Vector3.new(0,offsetman,0)):pointToObjectSpace(head.CFrame.p)
-	rightarm.LocalTransparencyModifier = rightarm.Transparency
-	leftarm.LocalTransparencyModifier = leftarm.Transparency
-	leftleg.LocalTransparencyModifier = leftleg.Transparency
-	rightleg.LocalTransparencyModifier = rightleg.Transparency
+	rightarm.LocalTransparencyModifier = _G.Transparency
+	leftarm.LocalTransparencyModifier = _G.Transparency
+	leftleg.LocalTransparencyModifier = _G.Transparency
+	rightleg.LocalTransparencyModifier = _G.Transparency
 	if camerakill == false then
 game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 		killermancamfov = 20*(flow/flowermax)
