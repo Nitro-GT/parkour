@@ -6,7 +6,7 @@ local colormansup = 255
 local sliding = false
 
 if plr:WaitForChild("PlayerScripts"):FindFirstChild("Player Stuff") then
-
+ 
 	plr:WaitForChild("PlayerScripts"):FindFirstChild("Player Stuff"):Destroy()
 
 	end
@@ -569,8 +569,11 @@ game:GetService("RunService"):BindToRenderStep("CameraOffset",Enum.RenderPriorit
 
 
 	end
+	local distance
 	if hum.Health == 0 then script:Destroy() end
-	local distance = (character.Head.Position - camera.CoordinateFrame.p).magnitude
+	pcall(function()
+	 distance = (character.Head.Position - camera.CoordinateFrame.p).magnitude
+	end)
 	if distance <= 1 then
 		rightShoulder.C0 = rightShoulder.C0:lerp((camera.CoordinateFrame * CFrame.new(1, -1, 0)):toObjectSpace(torso.CFrame):inverse() * CFrame.Angles(0, math.pi/2, 0), updateSpeed)
 		leftShoulder.C0 = leftShoulder.C0:lerp((camera.CoordinateFrame * CFrame.new(-1, -1, 0)):toObjectSpace(torso.CFrame):inverse() * CFrame.Angles(0, -math.pi/2, 0), updateSpeed)
