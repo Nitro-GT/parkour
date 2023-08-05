@@ -1,0 +1,6 @@
+local c = game:GetService("Players").LocalPlayer.Character
+if c.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitrowo-rblx/parkour/main/r15"))()
+else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitrowo-rblx/parkour/main/main"))()
+end
