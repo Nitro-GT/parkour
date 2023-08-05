@@ -1,3 +1,4 @@
+
 game.Players.LocalPlayer.Character:BreakJoints()
 plr = game.Players.LocalPlayer
 plr.CharacterAdded:Connect(function()
@@ -592,6 +593,15 @@ game:GetService("RunService"):BindToRenderStep("CameraOffset",Enum.RenderPriorit
 	leftarm.LocalTransparencyModifier = _G.Transparency
 	leftleg.LocalTransparencyModifier = _G.Transparency
 	rightleg.LocalTransparencyModifier = _G.Transparency
+	 for _,v in pairs(hum.Parent:GetChildren()) do
+       if v:IsA("Accessory") then
+       if _G.HideAccessories == true then
+       pcall(function()
+       v.Handle.LocalTransparencyModifier = _G.Transparency
+       end)
+       end
+       end
+       end
 	if camerakill == false then
 game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 		killermancamfov = 20*(flow/flowermax)
