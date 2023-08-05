@@ -1,4 +1,3 @@
-
 game.Players.LocalPlayer.Character:BreakJoints()
 plr = game.Players.LocalPlayer
 plr.CharacterAdded:Connect(function()
@@ -273,7 +272,12 @@ runvel.MaxForce = Vector3.new(0,0,0)
 runvel.P = 9999999999999999999999
 hum.WalkSpeed =20
 
-local flowmax = 35
+local flowmax 
+if _G.Walkspeed ~= nil and _G.Walkspeed >= 35 then
+flowmax = _G.Walkspeed
+else
+flowmax = 35
+end
 local flowmin = 16
 local dodgedel = false
 local crouchspeed = 8
