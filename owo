@@ -861,7 +861,7 @@ UIS.InputBegan:Connect(function(input,g)
 end)
 
 UIS.InputEnded:Connect(function(input,g)
-	if input.KeyCode == Enum.KeyCode.C then
+	if input.KeyCode == Enum.KeyCode.LeftControl then
 		if g then return end
 		cdown = false
 	end
@@ -2690,7 +2690,7 @@ local cdown = false
 
 UIS.InputBegan:Connect(function(input,g)
 
-	if input.KeyCode == Enum.KeyCode.C then
+	if input.KeyCode == Enum.KeyCode.LeftControl then
 		if g then return end
 		cdown = true
 
