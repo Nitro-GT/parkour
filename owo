@@ -1,4 +1,3 @@
-wait(1.25)
 plr = game.Players.LocalPlayer
 local c = game:GetService("Players").LocalPlayer.Character
 if c.Humanoid.RigType == Enum.HumanoidRigType.R6 then
