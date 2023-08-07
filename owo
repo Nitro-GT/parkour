@@ -617,7 +617,7 @@ end)
 local befh = hum.Health
 
 character.Humanoid.Died:Connect(function()
-connectrend:Disconnect()
+connectrend:UnBindFromRenderStep()
 end)
 
 
@@ -2457,7 +2457,7 @@ end)
 local befh = hum.Health
 
 character.Humanoid.Died:Connect(function()
-connectrend:Disconnect()
+connectrend:UnBindFromRenderStep()
 end)
 
 
