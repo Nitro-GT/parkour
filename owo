@@ -615,9 +615,7 @@ game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 end)
 local befh = hum.Health
 
-character.Humanoid.Died:Connect(function()
-connectrend:UnBindFromRenderStep()
-end)
+
 
 
 local function round(number, decimalPlaces)
@@ -2455,9 +2453,6 @@ game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 end)
 local befh = hum.Health
 
-character.Humanoid.Died:Connect(function()
-connectrend:UnBindFromRenderStep()
-end)
 
 
 
